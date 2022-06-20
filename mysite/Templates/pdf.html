@@ -1,0 +1,61 @@
+
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+<title>Internship Letter</title>
+<style>
+    html, body 
+    {
+        width: 25cm;
+        height: 36.5cm;
+        
+        
+    }
+    p
+    {
+        font-size: 19px;
+        margin: 18px
+    }
+</style>
+</head>
+<body style="border:black; border-width:5px; border-style:solid;">
+<p align="right"><img src= "{% static 'mysite/images/Avm logo.jpg' %}" align="left" valign="middle" vspace="5" hspace="5" ><br>AVM COMPUTERS PVT LTD.&nbsp; &nbsp; &nbsp;</p>
+
+{% for resultsdisplay in studentdetails %}
+
+<br><p align="left">To,&nbsp;{{resultsdisplay.Name}}</p>
+<p style="line-height: 0.1" align="center"><font size="4">REG. INTERNSHIP OFFER LETTER</font> </p>
+<p style="line-height: 1" align="left">Dear&nbsp;{{resultsdisplay.Name}},</p>
+<p style="line-height: 1" align="left">After thorough discussion and evaluation of your profile, we are pleased to offer you an internship as&nbsp;{{resultsdisplay.Position}}</p>
+<p align="left">Please find below details of your internship:</p><br>
+<p align="left">POSITION: {{resultsdisplay.Position}}</p>
+<p align="left">DURATION (Weeks): {{resultsdisplay.Duration}}</p> 
+<p align="left">START DATE: {{resultsdisplay.Start_date}}</p>
+<p align="left">END DATE: {{resultsdisplay.End_date}}</p>
+<p align="left">STIPEND (Rs): {{resultsdisplay.Stipend}}</p><br>
+
+{% endfor %}
+
+<P align="left">You are requested to revert back the confirmation of the position. After your confimation, 
+further details will be shared.<br>Once again, welcome onboard!</P>
+<p align="left">for any query regarding the internship, Kindly email our manager.<br>
+Email:manager.intern@avmcomputer.co.in 
+Mobile:&nbsp;+91-8980146044</p>
+<p align="left"> Authorised Signatory </p><br>
+<img src="{% static 'mysite/images/Ajayshah.jpg' %}" valign="middle" vspace="5" hspace="5"/><br>
+<p align="left">AJAY SHAH</p>
+
+<p align="left">(CO-OWNER)</p><br>
+<br><img src="{% static 'mysite/images/parth patel.jpg' %}" valign="middle" vspace="5" hspace="5"/><br>
+
+<p align="left">PARTH PATEL</p>
+<p align="left">(INTERN MANAGER)</p><br>
+<img src="{% static 'mysite/images/Stamp.jpg' %}" align="right" valign="middle" vspace="5" hspace="5"/><br><br><br><br><br><br>
+<p align="right"><img src="{% static 'mysite/images/Avm logo.jpg' %}" align="left" valign="middle" vspace="5" hspace="5"/><br><br><font size="2"> www.avmcomputer.co.in &nbsp; &nbsp; &nbsp;</font></p>
+
+
+
+</body>
+</div>
+</html>
